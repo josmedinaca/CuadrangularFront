@@ -1,0 +1,144 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-header card-header-danger ">
+                            <h4 class="card-title">Equipo A</h4>
+                            <p class="card-category">Introduzca la informacion de su equipo</p>
+                        </div>
+                        <br>
+                        <form (ngSubmit)="saveEntity()" #formulario="ngForm">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Nombre equipo" [(ngModel)]="entityForm.nombreA" name="nombreA" ngModel required #nombreA="ngModel">
+                                        <div *ngIf="nombreA.invalid && (nombreA.dirty || nombreA.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Ciudad" [(ngModel)]="entityForm.ciudadA" name="ciudadA" ngModel required #ciudadA="ngModel">
+                                        <div *ngIf="ciudadA.invalid && (ciudadA.dirty || ciudadA.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="correo" type="email" [(ngModel)]="entityForm.correoA" name="correoA" ngModel required #correoA="ngModel">
+                                        <div *ngIf="correoA.invalid && (correoA.dirty || correoA.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-header card-header-danger ">
+                                <h4 class="card-title">Equipo B</h4>
+                                <p class="card-category">Introduzca la informacion de su equipo</p>
+                            </div> <br>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Nombre equipo" [(ngModel)]="entityForm.nombreB" name="nombreB" ngModel required #nombreB="ngModel">
+                                        <div *ngIf="nombreB.invalid && (nombreB.dirty || nombreB.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Ciudad" [(ngModel)]="entityForm.ciudadB" name="ciudadB" ngModel required #ciudadB="ngModel">
+                                        <div *ngIf="ciudadB.invalid && (ciudadB.dirty || ciudadB.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="correo" type="email" [(ngModel)]="entityForm.correoB" name="correoB" ngModel required #correoB="ngModel">
+                                        <div *ngIf="correoB.invalid && (correoB.dirty || correoB.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-header card-header-danger ">
+                                <h4 class="card-title">Equipo C</h4>
+                                <p class="card-category">Introduzca la informacion de su equipo</p>
+                            </div> <br>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Nombre equipo" [(ngModel)]="entityForm.nombreC" name="nombreC" ngModel required #nombreC="ngModel">
+                                        <div *ngIf="nombreC.invalid && (nombreC.dirty || nombreC.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Ciudad" [(ngModel)]="entityForm.ciudadC" name="ciudadC" ngModel required #ciudadC="ngModel">
+                                        <div *ngIf="ciudadC.invalid && (ciudadC.dirty || ciudadC.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="correo" type="email" [(ngModel)]="entityForm.correoC" name="correoC" ngModel required #correoC="ngModel">
+                                        <div *ngIf="correoC.invalid && (correoC.dirty || correoC.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="card-header card-header-danger ">
+                                <h4 class="card-title">Equipo D</h4>
+                                <p class="card-category">Introduzca la informacion de su equipo</p>
+                            </div> <br>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Nombre equipo" [(ngModel)]="entityForm.nombreD" name="nombreD" ngModel required #nombreD="ngModel">
+                                        <div *ngIf="nombreD.invalid && (nombreD.dirty || nombreD.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="Ciudad" [(ngModel)]="entityForm.ciudadD" name="ciudadD" ngModel required #ciudadD="ngModel">
+                                        <div *ngIf="ciudadD.invalid && (ciudadD.dirty || ciudadD.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="full-width">
+                                        <input matInput placeholder="correo" type="email" [(ngModel)]="entityForm.correoD" name="correoD" ngModel required #correoD="ngModel">
+                                        <div *ngIf="correoD.invalid && (correoD.dirty || correoD.touched)" class="form-control-feedback text-danger">
+                                            Este campo es Requerido
+                                        </div>
+                                    </mat-form-field>
+                                </div>
+                            </div><br>
+                            <div class="text-center"><button mat-raised-button type="submit" [disabled]="!formulario.form.valid" class="btn btn-danger">Registrar equipos</button></div>
+
+                            <div class="clearfix"></div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

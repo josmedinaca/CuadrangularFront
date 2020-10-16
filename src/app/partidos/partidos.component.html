@@ -1,0 +1,62 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Tabla de partidos jugados</h4>
+                        <p class="card-category"> Ingrese el marcador</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Equipo Local
+                                    </th>
+                                    <th>
+                                        Goles local
+                                    </th>
+                                    <th>
+                                        Equipo Adversario
+                                    </th>
+                                    <th>
+                                        Goles adversario
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of ItemsArray; let i = index;">
+                                        <th>
+                                            <div [(ngModel)]="ids[i]= item.idPartido"></div>{{ item.idPartido }}</th>
+                                        <td>{{ item.equiLocal.nombre }}</td>
+                                        <td>
+                                            <mat-form-field style="width: 20%;">
+                                                <input matInput placeholder="Goles" [(ngModel)]="inputsgolL[i]" ngModel required>
+
+                                            </mat-form-field>
+                                        </td>
+                                        <td>{{ item.equiAdversario.nombre}}</td>
+                                        <td>
+                                            <mat-form-field style="width: 20%;">
+                                                <input matInput placeholder="Goles" [(ngModel)]="inputsgolA[i]" name="inputsgolA" ngModel required>
+
+                                            </mat-form-field>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center"><button mat-raised-button class="btn btn-danger" (click)="searchEntity($event);">Registrar equipos</button>
+                            <button mat-raised-button class="btn btn-danger" (click)="updateEntity();">Registrar Goles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

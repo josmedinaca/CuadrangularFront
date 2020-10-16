@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Clasificacion</h4>
+                        <p class="card-category"> Equipos clasificados segun su puntaje total</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        Equipo
+                                    </th>
+                                    <th>
+                                        Puntuacion
+                                    </th>
+
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of ItemsArray;">
+                                        <th>
+                                            {{ item.idPuntuacion }}</th>
+                                        <td>{{ item.equipo.nombre }}</td>
+
+                                        <td>{{ item.puntuacion}}</td>
+
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="text-center"><button mat-raised-button class="btn btn-danger" (click)="searchEntity($event);">Generar score</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
